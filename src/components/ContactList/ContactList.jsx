@@ -1,9 +1,10 @@
 import Contact from "../Contact/Contact";
+import s from "../ContactList/ContactList.module.scss";
 
 export const ContactList = ({ getFilteredData, handleDeleteContact }) => {
   return (
     <div>
-      <ul>
+      <ul className={s.list}>
         {getFilteredData().map((contact) => (
           <Contact
             key={contact.id}

@@ -1,11 +1,17 @@
+import s from "../Contact/Contact.module.scss";
+
 const Contact = ({ contact, handleDeleteContact }) => {
   return (
-    <li>
+    <li className={s.item}>
       <div>
         <p>{contact.name}</p>
         <p>{contact.number}</p>
       </div>
-      <button type="button" onClick={() => handleDeleteContact(contact.id)}>
+      <button
+        className={s.btn}
+        type="button"
+        onClick={() => handleDeleteContact(contact.id)}
+      >
         Delete
       </button>
     </li>

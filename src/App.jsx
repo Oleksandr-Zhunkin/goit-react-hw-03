@@ -57,12 +57,14 @@ function App() {
     <>
       <Section>
         <Container>
-          <h1>Phonebook</h1>
-          <ContactForm handleSubmit={handleSubmit} />
-          <SearchBox
-            searchValue={searchValue}
-            setSearchValue={setSearchValue}
-          />
+          <h1 className="title">Phonebook</h1>
+          <div className="input_wraps">
+            <ContactForm handleSubmit={handleSubmit} contacts={contacts} />
+            <SearchBox
+              searchValue={searchValue}
+              setSearchValue={setSearchValue}
+            />
+          </div>
           <ContactList
             getFilteredData={getFilteredData}
             handleDeleteContact={handleDeleteContact}
